@@ -240,18 +240,16 @@ function quiz() {
 document.querySelector('#level-input button').addEventListener('click', function(event) {
     if (document.querySelector('#enter-level').value.replaceAll(' ', '') !== '') {
         const level = document.querySelector('#enter-level').value;
-        // if (document.querySelector('#character').innerText === '例') {
-        //     한자 = 한자[level];
-        //     훈음 = 훈음[level];
-        // } else {
-        //     한자 = 단어.slice(200*(level-1), 200*level);
-        //     훈음 = 뜻.slice(200*(level-1), 200*level);
-        //     for (let i = 0; i < 200; i++){
-        //         훈음[i] = 훈음[i].toString();
-        //     }
-        // }
-        한자 = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
-        훈음 = ['월', '화', '수', '목', '금', '토', '일'];
+        if (document.querySelector('#character').innerText === '例') {
+            한자 = 한자[level];
+            훈음 = 훈음[level];
+        } else {
+            한자 = 단어.slice(200*(level-1), 200*level);
+            훈음 = 뜻.slice(200*(level-1), 200*level);
+            for (let i = 0; i < 200; i++){
+                훈음[i] = 훈음[i].toString();
+            }
+        }
         document.querySelector('h1').innerText = level + '단계';
         document.getElementById('level-input').style.display = 'none';
         document.getElementById('game').style.display = 'block';
@@ -266,7 +264,7 @@ document.querySelector('#enter-level').addEventListener('keypress', function(eve
 });
 
 document.querySelector('#mute').addEventListener('click', function(event) {
-    const URLs = ['https://upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg', 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mute_Icon.svg/1200px-Mute_Icon.svg.png'];
+    const URLs = ['https:/\/upload.wikimedia.org/wikipedia/commons/2/21/Speaker_Icon.svg', 'https:/\/upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Mute_Icon.svg/1200px-Mute_Icon.svg.png'];
     if (document.querySelector('#mute').src === URLs[0]) {
         document.querySelector('#mute').src = URLs[1];
         message.volume = 0;

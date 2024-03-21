@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+}
+
+/* #select-level {
+    display: none;
+} */
+
+#game {
+    display: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 18% 18% 18% 18% 18%;
+    gap: 2.5%;
+    margin-bottom: 10%;
+}
+
+.square {
+    border: 1px solid black;
+    aspect-ratio: 1 / 1;
+    border-radius: 15%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.square div {
+    width: 100%;
+}
+
+.square:hover {
+    box-shadow: 0 0 1cm rgba(33,33,33,.2);
+    cursor: pointer;
+}
+
+h1, h2, p {
+    text-align: center;
+    width: 100%;
+}
+
+h2 {
+    font-size: 2.25vw;
+}
+
+p {
+    font-size: 1.3vw;
+}
+
+.grid-container a {
+    text-decoration: none;
+    color: black;
+}
+
+#character{
+    font-size: 7vw;
+    text-align: center;
+}
+
+#right-answer {
+    font-size: 7vw;
+    text-align: center;
+    display: none;
+}
+
+.quiz {
+    margin: 0 auto;
+}
+
+#answer, #level-input {
+    top: 50%;
+}
+
+input {
+    width: 10vw;
+    height: 2vw;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#answer div, #level-input div {
+    margin: 1vw auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#answer div *, #level-input div * {
+    margin: 0 0.2vw;
+    font-size: 1.2vw;
+}
+
+#answer img {
+    width: 2vw;
+    height: 2vw;
+}
+
+img, #message {
+    display: none;
+}
+
+#bar {
+    box-sizing: border-box;
+    width: 0%;
+    height: 5vh;
+    background-color: #41A145;
+}
+
+#bar-text {
+    position: absolute;
+    top: 1vh;
+    right: 1vh;
+}
+
+#mute {
+    display: inline;
+    position: absolute;
+    cursor: pointer;
+    top: 1vh;
+    left: 1vh;
+    width: 5vh;
+    height: 5vh;
+}
+
+#statistics, #clear {
+    width: 60%;
+    height: 40%;
+    background-color: buttonface;
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    border-radius: 5%;
+    border: 3px solid cadetblue;
+    display: none;
+}
+
+#clear > div {
+    display: flex;
+    align-items: center;
+    height: 90%;
+}
+
+#clear > div > div {
+    margin: auto;
+}
+
+#message2 {
+    color: dodgerblue;
+}
+
+#continue {
+    display: none;
+    margin: 10vh auto;
+    height: 10vw;
+    width: 20vw;
+}
+
+#statistics button, #clear button {
+    display: none;
+}    
+
+#over-95 {
+    display: none;
+}
+
+footer {
+    width: 97%;
+    padding: 1.5vw;
+    position: absolute;
+    bottom: 0;
+    font-size: 1.2vw;
+    border-top: 1px solid black;
+}
+
+@media (max-width: 700px) {
+    #level-input label {
+        font-size: 5vw;
+        line-height: 10vw;
+    }
+
+    #game img {
+        width: 10vw;
+        height: 10vw;
+    }
+
+    #game input, #level-input input {
+        font-size: 5vw;
+        width: 35vw;
+        height: 10vw;
+    }
+
+    #answer button, #continue, #level-input button {
+        font-size: 5vw;
+    }
+
+    #character, #right-answer {
+        font-size: 15vw;
+    }
+
+    #statistics, #clear {
+        height: 40%;
+        top: 10%;
+    }
+
+    #statistics h2, #clear h2 {
+        font-size: 4.5vw;
+    }
+
+    #statistics p, #clear p {
+        font-size: 3vw;
+    }
+
+    .continue-text {
+        display: none;
+    }
+
+    #statistics button, #clear button {
+        display: block;
+        margin: auto;
+        font-size: 3.7vw;
+        background-color: beige;
+    }
+
+    footer {
+        width: 90%;
+        padding: 5vw;
+        font-size: 3.5vw;
+    }
+}
